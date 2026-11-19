@@ -1,4 +1,6 @@
-FROM python:3.12-slim
+# Digest pinned to a build containing perl-base 5.40.1-6+deb13u1 (fixes CVE-2026-57432,
+# Snyk SNYK-DEBIAN13-PERL-17960058). Bump the digest when refreshing the base image.
+FROM python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
 
 WORKDIR /app
 
